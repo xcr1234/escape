@@ -1,0 +1,31 @@
+.main{
+    border:1px solid #ccc;
+    width: 400px;
+    height: 350px;
+    margin: 20px auto;
+    background-color: #F3EAC1;
+}
+.title{
+    font-size: 24px;
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #000;
+}
+.main form div{
+    margin-top: 30px;
+    padding-left: 20px;
+    width: 400px;
+}
+.main form input {
+    width: 150px;
+}
+.main form label {
+    width: 120px;
+    float:left;
+    text-align: right;
+    height: 22px;
+    line-height: 22px;
+}
