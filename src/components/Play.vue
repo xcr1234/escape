@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <div v-bind:class="game.question ? 'frameQuestion' : 'frameEvent'">{{ game.title }}</div>
+        <div v-bind:class="game.question ? 'frameQuestion' : 'frameEvent'">{{ game.title }} <img src="./../../static/img/audio.png" style="cursor: pointer;" onclick="document.getElementById('audio1').play()" /></div>
         <div class="optionQues" v-if="game.question">
             <div class="item" v-for="(answer,index) in game.answer">
                 <input type="radio" name="options" v-bind:id="'options' + index" class="option-input radio" v-bind:value="index" v-model="select" />
@@ -12,6 +12,7 @@
             复活药数量：{{reborn}}<br/><br/>
             <a href="javascript:;" v-on:click="againGame">从头再来</a>
         </div>
+        <audio style="display:none" v-bind:src="audioSrc" autoplay="autoplay" id="audio1"></audio>
     </div>
 </template>
 
@@ -32,7 +33,8 @@
               reborn : 0,
               level : 0,
               select:null,
-              errorMsg:null
+              errorMsg:null,
+              sound:null
           }
         },
         methods:{
@@ -97,7 +99,7 @@
                 this.reborn = 0;
                 window.localStorage.removeItem("escape_level");
                 window.localStorage.removeItem("escape_reborn");
-            }
+            },
         },
         mounted:function () {
             this.level = window.localStorage["escape_level"] ? window.localStorage["escape_level"] : 0;
@@ -114,6 +116,9 @@
                     }
                 }
                 return data[this.level];
+            },
+            audioSrc:function () {
+                return 'http://118.89.174.235:8080/speech/speech?uid=' + window.uid + '&text=' + this.game.title;
             }
         }
     }
