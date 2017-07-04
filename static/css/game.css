@@ -1,0 +1,63 @@
+.main {
+    border:1px solid #ccc;
+    width: 500px;
+    height: 350px;
+    margin: 20px auto;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.options{
+
+    padding-top: 20px;
+    padding-left: 10px;
+
+}
+.optionQues{
+    padding-top: 20px;
+    padding-left: 10px;
+    min-height:180px;
+}
+.frameEvent {
+    width: 90%;
+    margin: 0 auto;
+    height: 200px;
+    line-height: 200%;
+    font-size: 20px;
+
+}
+
+.frameQuestion {
+    width: 90%;
+
+    margin: 0 auto
+}
+
+.item {
+    margin-top:15px;
+    height: 40px;
+    width: 100%;
+}
+
+.item label{
+    width: 80%;
+    display: inline-block;
+}
+.pull-right{
+    height: 45px;
+    float: right;
+    margin-right: 30px;
+    position: relative;
+    bottom: 20px;
+    margin-top: 20px;
+}
+.pull-right a {
+    width: 100px;
+    margin-bottom: 4px;
+}
+.item input,.item label {
+    cursor: pointer;
+    line-height: 40px;
+}
+.item label:hover {
+    text-decoration: underline;
+}
