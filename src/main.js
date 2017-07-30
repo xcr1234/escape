@@ -4,6 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
+$.ajax({
+  url:"http://118.89.174.235:8080/test/",
+  type:"GET",
+  async : false,
+  success:function (data) {
+    window.token = data;
+  }
+});
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

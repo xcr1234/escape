@@ -7,6 +7,7 @@
 <script>
     window.uid = randomString(12);
 
+
     export default {
         name: 'app',
     }

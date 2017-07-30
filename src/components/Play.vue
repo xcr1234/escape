@@ -118,7 +118,7 @@
                 return data[this.level];
             },
             audioSrc:function () {
-                return 'http://118.89.174.235:8080/speech/speech?uid=' + window.uid + '&text=' + this.game.title;
+                return "http://tsn.baidu.com/text2audio?tex=" + this.game.title + "&lan=zh&tok="+window.token+"&ctp=1&cuid="+window.uid;
             }
         }
     }
