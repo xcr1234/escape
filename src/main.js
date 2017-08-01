@@ -6,7 +6,7 @@ import router from './router'
 
 
 $.ajax({
-  url:"http://118.89.174.235:8080/test/",
+  url:"https://javadb.com.cn/test/",
   type:"GET",
   async : false,
   success:function (data) {
